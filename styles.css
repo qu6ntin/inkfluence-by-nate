@@ -252,6 +252,26 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; line-height: 1
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
 .form-note { font-size: 0.78rem; color: var(--muted); text-transform: none; letter-spacing: 0; }
 .hidden-field { display: none; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Locked contact form + "book on social" overlay */
+.booking { position: relative; }
+.contact-form.locked { filter: blur(3px); opacity: 0.35; pointer-events: none; user-select: none; }
+.booking-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: 14px; padding: 30px;
+  background: rgba(13,13,15,0.8); border: 1px solid var(--line);
+}
+.booking-lock {
+  width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; border: 1px solid var(--accent); border-radius: 50%;
+  box-shadow: 0 0 30px rgba(47,107,255,0.25);
+}
+.booking-overlay h3 { font-size: 1.35rem; }
+.booking-overlay p { color: var(--muted); max-width: 330px; font-size: 0.95rem; }
+.booking-socials { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
+.booking-socials .btn { padding: 11px 22px; }
 
 /* ===========================================================
    FOOTER

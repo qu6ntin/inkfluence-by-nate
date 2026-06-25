@@ -187,15 +187,15 @@
         <h2 class="section-title reveal">Let's Make Something Permanent</h2>
         <p class="reveal">Ready to book or just have a question? Reach out and Nate will get back to you. Walk-ins welcome when the chair is open.</p>
         <ul class="contact-list reveal">
-          <li><span class="contact-label">Location</span> Chippewa of the Thames First Nation, ON</li>
-          <li><span class="contact-label">Phone</span> <a href="tel:+10000000000">(000) 000-0000</a></li>
-          <li><span class="contact-label">Email</span> <a href="mailto:hello@inkfluencebynate.com">hello@inkfluencebynate.com</a></li>
-          <li><span class="contact-label">Hours</span> By appointment · Walk-ins welcome</li>
+          <li><span class="contact-label">Location</span> <span id="cLocation">Chippewa of the Thames First Nation, ON</span></li>
+          <li><span class="contact-label">Phone</span> <a id="cPhone" href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><span class="contact-label">Email</span> <a id="cEmail" href="mailto:hello@inkfluencebynate.com">hello@inkfluencebynate.com</a></li>
+          <li><span class="contact-label">Hours</span> <span id="cHours">By appointment · Walk-ins welcome</span></li>
         </ul>
         <div class="socials reveal">
-          <a href="#" aria-label="Instagram" class="social">Instagram</a>
-          <a href="#" aria-label="Facebook" class="social">Facebook</a>
-          <a href="#" aria-label="TikTok" class="social">TikTok</a>
+          <a id="sInstagram" href="#" aria-label="Instagram" class="social">Instagram</a>
+          <a id="sFacebook" href="#" aria-label="Facebook" class="social">Facebook</a>
+          <a id="sTiktok" href="#" aria-label="TikTok" class="social">TikTok</a>
         </div>
       </div>
 
@@ -227,20 +227,12 @@
       <img src="images/InkfluencePNG.png" alt="Inkfluence by Nate" class="admin-logo" />
       <h2 class="admin-title" id="adminTitle">Admin Login</h2>
       <p class="admin-sub">Authorized access only — for Nate.</p>
-      <form class="admin-form" id="adminForm" autocomplete="off">
-        <label>Email
-          <input type="email" name="email" id="adminEmail" placeholder="nate@inkfluencebynate.com" required />
-        </label>
-        <label>Password
-          <input type="password" name="password" id="adminPassword" placeholder="••••••••" required />
-        </label>
-        <p class="admin-message" id="adminMessage" role="alert"></p>
-        <button type="submit" class="btn btn-primary btn-block">Log In</button>
-      </form>
-      <p class="admin-note">Access is by invitation only. There is no public sign-up.</p>
+      <a href="admin/" class="btn btn-primary btn-block admin-github">Continue with GitHub</a>
+      <p class="admin-note">Editing is restricted to people with access to the website's GitHub repository. There is no public sign-up.</p>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <script src="content.js"></script>
 </body>
 </html>

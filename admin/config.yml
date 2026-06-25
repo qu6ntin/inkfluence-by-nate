@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: qu6ntin/inkfluence-by-nate
+  branch: main
+
+# New image uploads from the CMS are saved here:
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "studio"
+    label: "Studio Info"
+    files:
+      - name: "info"
+        label: "Contact & Socials"
+        file: "content/info.json"
+        format: "json"
+        fields:
+          - { name: "location", label: "Location", widget: "string" }
+          - { name: "phone", label: "Phone (shown on site)", widget: "string" }
+          - { name: "phone_link", label: "Phone (dial format, e.g. +15195551234)", widget: "string" }
+          - { name: "email", label: "Email", widget: "string" }
+          - { name: "hours", label: "Hours", widget: "string" }
+          - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
+          - { name: "facebook", label: "Facebook URL", widget: "string", required: false }
+          - { name: "tiktok", label: "TikTok URL", widget: "string", required: false }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "items"
+        label: "Portfolio Images"
+        file: "content/gallery.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Tattoos"
+            label_singular: "Tattoo"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "alt", label: "Caption / description", widget: "string", default: "Tattoo by Nate" }

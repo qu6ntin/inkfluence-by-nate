@@ -92,21 +92,16 @@
   if (adminModal) {
     var adminOpen = document.getElementById('adminOpen');
     var adminClose = document.getElementById('adminClose');
-    var adminForm = document.getElementById('adminForm');
-    var adminMessage = document.getElementById('adminMessage');
-    var adminEmail = document.getElementById('adminEmail');
 
     function openAdmin() {
       adminModal.classList.add('open');
       adminModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      setTimeout(function () { adminEmail && adminEmail.focus(); }, 60);
     }
     function closeAdmin() {
       adminModal.classList.remove('open');
       adminModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-      if (adminMessage) { adminMessage.textContent = ''; adminMessage.className = 'admin-message'; }
     }
 
     adminOpen && adminOpen.addEventListener('click', openAdmin);
@@ -117,21 +112,8 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && adminModal.classList.contains('open')) closeAdmin();
     });
-
-    adminForm && adminForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // ----------------------------------------------------------------------
-      // SECURE LOGIN GOES HERE.
-      // A static site cannot authenticate securely on its own — never put a
-      // real password in this file. Wire this up to an invite-only auth
-      // provider (e.g. Netlify Identity + Decap CMS) so only Nate can log in.
-      // Until then, this is a non-functional placeholder.
-      // ----------------------------------------------------------------------
-      if (adminMessage) {
-        adminMessage.textContent = 'Admin login isn’t connected yet. Hook this up to a secure auth provider to enable editing.';
-        adminMessage.className = 'admin-message info show';
-      }
-    });
+    // The "Continue with GitHub" button is a normal link to /admin/ (Decap CMS),
+    // which handles the GitHub OAuth login. No password is handled on this page.
   }
 
   /* ---------- Footer year ---------- */

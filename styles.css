@@ -251,6 +251,7 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; line-height: 1
 }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
 .form-note { font-size: 0.78rem; color: var(--muted); text-transform: none; letter-spacing: 0; }
+.hidden-field { display: none; }
 
 /* ===========================================================
    FOOTER

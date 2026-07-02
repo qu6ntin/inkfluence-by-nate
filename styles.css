@@ -281,63 +281,6 @@ h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; line-height: 1
 .footer-meta { color: var(--muted); margin-bottom: 6px; font-size: 0.9rem; }
 .footer-copy { color: var(--muted); font-size: 0.8rem; opacity: 0.7; }
 
-/* ---------- Admin login link + modal ---------- */
-.admin-link {
-  margin-top: 18px; background: none; border: 0; cursor: pointer;
-  font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 2px;
-  font-size: 0.72rem; color: var(--muted); opacity: 0.6; padding: 6px 4px;
-  transition: color 0.3s, opacity 0.3s;
-}
-.admin-link:hover { color: var(--accent); opacity: 1; }
-
-.admin-modal {
-  position: fixed; inset: 0; z-index: 1000; display: none;
-  align-items: center; justify-content: center; padding: 24px;
-}
-.admin-modal.open { display: flex; }
-.admin-backdrop {
-  position: absolute; inset: 0; background: rgba(6,8,14,0.82);
-  backdrop-filter: blur(6px); animation: adminFade 0.3s var(--ease);
-}
-.admin-dialog {
-  position: relative; z-index: 1; width: 100%; max-width: 400px;
-  background: var(--bg-2); border: 1px solid var(--line);
-  border-top: 3px solid var(--accent);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(47,107,255,0.15);
-  padding: 38px 34px 30px; text-align: center;
-  animation: adminPop 0.35s var(--ease);
-}
-@keyframes adminFade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes adminPop { from { opacity: 0; transform: translateY(18px) scale(0.97); } to { opacity: 1; transform: none; } }
-
-.admin-close {
-  position: absolute; top: 12px; right: 16px; background: none; border: 0; cursor: pointer;
-  color: var(--muted); font-size: 1.6rem; line-height: 1; transition: color 0.3s;
-}
-.admin-close:hover { color: var(--accent); }
-.admin-logo { height: 72px; width: auto; margin: 0 auto 14px; }
-.admin-title { font-size: 1.7rem; margin-bottom: 6px; }
-.admin-sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
-
-.admin-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
-.admin-form label {
-  display: flex; flex-direction: column; gap: 7px;
-  font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;
-  font-size: 0.74rem; color: var(--muted);
-}
-.admin-form input {
-  background: var(--bg); border: 1px solid var(--line); color: var(--text);
-  padding: 13px 14px; font-family: 'Inter', sans-serif; font-size: 0.95rem;
-  transition: border-color 0.3s;
-}
-.admin-form input:focus { outline: none; border-color: var(--accent); }
-.admin-form .btn { margin-top: 6px; }
-
-.admin-message { min-height: 0; font-size: 0.85rem; color: #ff6b6b; margin: 0; }
-.admin-message.show { min-height: 1.2em; }
-.admin-message.info { color: var(--accent-2); }
-.admin-note { margin-top: 18px; font-size: 0.74rem; color: var(--muted); opacity: 0.7; }
-
 /* ===========================================================
    SCROLL REVEAL ANIMATION
    =========================================================== */

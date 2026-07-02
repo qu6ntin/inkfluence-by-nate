@@ -87,35 +87,6 @@
     counters.forEach(function (el) { el.textContent = el.getAttribute('data-count'); });
   }
 
-  /* ---------- Admin login modal ---------- */
-  var adminModal = document.getElementById('adminModal');
-  if (adminModal) {
-    var adminOpen = document.getElementById('adminOpen');
-    var adminClose = document.getElementById('adminClose');
-
-    function openAdmin() {
-      adminModal.classList.add('open');
-      adminModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeAdmin() {
-      adminModal.classList.remove('open');
-      adminModal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    adminOpen && adminOpen.addEventListener('click', openAdmin);
-    adminClose && adminClose.addEventListener('click', closeAdmin);
-    adminModal.querySelectorAll('[data-admin-close]').forEach(function (el) {
-      el.addEventListener('click', closeAdmin);
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && adminModal.classList.contains('open')) closeAdmin();
-    });
-    // The "Continue with GitHub" button is a normal link to /admin/ (Decap CMS),
-    // which handles the GitHub OAuth login. No password is handled on this page.
-  }
-
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

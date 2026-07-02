@@ -11,7 +11,8 @@ Static site (HTML / CSS / vanilla JS) — no build step required.
 inkfluence-by-nate/
 ├── index.html        # Page markup (all sections)
 ├── styles.css        # Theme, layout, animations (colors via CSS variables in :root)
-├── script.js         # Scroll reveal, parallax, counters, mobile nav, admin modal
+├── script.js         # Scroll reveal, parallax, counters, mobile nav
+├── success.html      # Confirmation page (used if the contact form is re-enabled)
 └── images/           # All photos + logo
     ├── hero.jpg          # Hero background (Nate + neon sign)
     ├── logo.jpg          # Logo (solid background)
@@ -36,9 +37,9 @@ Then open the printed `http://localhost:...` address.
 - **Colors / theme:** edit the CSS variables in `:root` at the top of `styles.css`
   (the accent blue is `--accent`).
 - **Photos:** drop replacements into `images/` using the same filenames.
+- **Text / links:** edit `index.html` directly.
 
-## Admin login
+## Contact / booking
 
-The footer has an **Admin Login** button. The UI is in place but is **not yet
-connected to a real authentication backend**. Planned: invite-only login + content
-editing via **Decap CMS + Netlify Identity** (no public sign-up).
+Bookings are directed to social media (Instagram / Facebook / TikTok). The contact
+form is intentionally locked because email notifications require a paid Netlify plan.
